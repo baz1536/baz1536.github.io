@@ -24,17 +24,17 @@
 <body>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: March 2026</p>
+    <p class="updated">Last updated: March 2026 (v1.4)</p>
 
     <p>RepeatRx ("the app") is developed by Barry Rose. This policy explains what data the app collects, how it is used, and how it is protected.</p>
 
     <h2>1. Data We Collect</h2>
     <p>RepeatRx stores the following information that you provide:</p>
     <ul>
-        <li>Your full name, date of birth, phone number, email address, and home address</li>
-        <li>Your GP practice name, email address, and phone number</li>
-        <li>Your medication names, dosages, forms, and frequencies</li>
-        <li>A history of prescription requests you have sent</li>
+        <li>Patient details: full name, date of birth, NHS number, phone number, email address, and home address (one or more patients)</li>
+        <li>GP practice details per patient: practice name, email address, and phone number</li>
+        <li>Medication names, dosages, types, and frequencies per patient</li>
+        <li>A history of prescription requests sent for each patient</li>
         <li>SMTP email credentials (host, port, username, password)</li>
         <li>A PIN code (stored as a one-way hash) and biometric preference</li>
     </ul>
@@ -50,39 +50,50 @@
     <h2>3. How Your Data Is Used</h2>
     <p>Your data is used solely to:</p>
     <ul>
-        <li>Compose and send prescription request emails to your GP practice via your own email account</li>
-        <li>Display a history of requests you have sent</li>
-        <li>Populate your personal details into email sign-offs where you have enabled this</li>
+        <li>Compose and send prescription request emails to each patient's GP practice via your own email account</li>
+        <li>Display a history of requests sent for each patient</li>
+        <li>Populate patient details into email and report content where you have enabled this</li>
     </ul>
     <p>RepeatRx does not use your data for advertising, analytics, profiling, or any purpose beyond the above.</p>
 
     <h2>4. Email Sending</h2>
-    <p>When you send a prescription request, the app connects directly to your configured SMTP email server using credentials you provide. No email content passes through any RepeatRx infrastructure. You are sending email directly from your own account.</p>
+    <p>RepeatRx supports two methods for sending prescription requests:</p>
+    <ul>
+        <li><strong>Default Mail App:</strong> The app opens your device's default mail app (e.g. Mail, Gmail, Outlook) with the email pre-composed. Sending is handled entirely by that app. RepeatRx has no visibility of whether the email was delivered.</li>
+        <li><strong>SMTP:</strong> The app connects directly to your configured SMTP email server using credentials you provide. No email content passes through any RepeatRx infrastructure. You are sending email directly from your own account.</li>
+    </ul>
 
-    <h2>5. NHS Directory Search</h2>
+    <h2>5. Camera and Photo Library</h2>
+    <p>If you use the prescription scanning feature, the app may request access to your camera or photo library. Photos are processed entirely on-device using Apple's Vision framework to extract text. No image or photo data is stored by the app, transmitted to any server, or retained after the scan is complete.</p>
+
+    <h2>6. Medication Report</h2>
+    <p>You can generate a PDF report of your selected medications. This report is created entirely on-device and shared only via the iOS share sheet at your explicit request (e.g. printed, saved to Files, or emailed). The app does not send or store this report anywhere automatically.</p>
+
+    <h2>7. NHS Directory Search</h2>
     <p>When searching for a GP practice, the app makes a request to the publicly available NHS Organisation Data Service (ODS) API at <code>directory.spineservices.nhs.uk</code>. No personal data is sent in these requests — only the search term you enter (practice name or postcode).</p>
 
-    <h2>6. Biometric Data</h2>
+    <h2>8. Biometric Data</h2>
     <p>If you enable Face ID or Touch ID, authentication is handled entirely by iOS using Apple's LocalAuthentication framework. The app never has access to your biometric data.</p>
 
-    <h2>7. Data Sharing</h2>
+    <h2>9. Data Sharing</h2>
     <p>RepeatRx does not share your data with any third party. Your data never leaves your device except as part of emails you explicitly choose to send.</p>
 
-    <h2>8. Data Deletion</h2>
+    <h2>10. Data Deletion</h2>
     <p>You can delete your data at any time from within the app:</p>
     <ul>
+        <li><strong>Patients list → swipe to delete</strong> — removes a patient and all their medications and history</li>
         <li><strong>Settings → Clear Data</strong> — delete individual categories of data</li>
         <li><strong>Settings → Clear Data → Reset Application</strong> — removes all data, credentials, and your PIN, returning the app to its initial state</li>
         <li>Deleting the app from your device removes all locally stored data</li>
     </ul>
 
-    <h2>9. Children's Privacy</h2>
+    <h2>11. Children's Privacy</h2>
     <p>RepeatRx is not directed at children under the age of 13 and does not knowingly collect data from children.</p>
 
-    <h2>10. Changes to This Policy</h2>
+    <h2>12. Changes to This Policy</h2>
     <p>If this policy changes, the updated version will be posted at this URL with a revised date.</p>
 
-    <h2>11. Contact</h2>
+    <h2>13. Contact</h2>
     <p>If you have any questions about this privacy policy, please contact: <a href="mailto:barry@barryrose.dev">barry@barryrose.dev</a></p>
 
 </body>
