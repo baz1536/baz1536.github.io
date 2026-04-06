@@ -24,7 +24,7 @@
 <body>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: March 2026 (v1.4)</p>
+    <p class="updated">Last updated: April 2026 (v1.5)</p>
 
     <p>RepeatRx ("the app") is developed by Barry Rose. This policy explains what data the app collects, how it is used, and how it is protected.</p>
 
@@ -69,28 +69,30 @@
     <h2>6. Medication Report</h2>
     <p>You can generate a PDF report of your selected medications. This report is created entirely on-device and shared only via the iOS share sheet at your explicit request (e.g. printed, saved to Files, or emailed). The app does not send or store this report anywhere automatically.</p>
 
-    <h2>7. NHS Directory Search</h2>
-    <p>When searching for a GP practice, the app makes a request to the publicly available NHS Organisation Data Service (ODS) API at <code>directory.spineservices.nhs.uk</code>. No personal data is sent in these requests — only the search term you enter (practice name or postcode).</p>
+    <h2>7. Address Lookup</h2>
+    <p>When using the address search feature in patient personal details, the app sends the postcode or address text you type to the Ordnance Survey Places API at <code>api.os.uk</code>. No personal data is included in these requests — only the search term you enter. Results are used solely to auto-fill the address fields and are not stored by the app.</p>
 
-    <h2>8. Biometric Data</h2>
+    <h2>8. Data Export</h2>
+    <p>You can export your data as a <code>.repeatrx</code> file using <strong>Settings → Data → Export Data</strong>. This file contains all patient details, medications, and prescription history in an unencrypted format. Once exported, the file is handled by iOS and shared at your direction (e.g. via AirDrop, Files, or email). RepeatRx does not transmit this file anywhere automatically. You are responsible for the security of any exported file.</p>
+
+    <h2>9. Biometric Data</h2>
     <p>If you enable Face ID or Touch ID, authentication is handled entirely by iOS using Apple's LocalAuthentication framework. The app never has access to your biometric data.</p>
 
-    <h2>9. Data Sharing</h2>
-    <p>RepeatRx does not share your data with any third party. Your data never leaves your device except as part of emails you explicitly choose to send.</p>
+    <h2>10. Data Sharing</h2>
+    <p>RepeatRx does not share your data with any third party. Your data never leaves your device except as part of emails you explicitly choose to send, or files you explicitly choose to export.</p>
 
-    <h2>10. Data Deletion</h2>
+    <h2>11. Data Deletion</h2>
     <p>You can delete your data at any time from within the app:</p>
     <ul>
         <li><strong>Patients list → swipe to delete</strong> — removes a patient and all their medications and history</li>
-        <li><strong>Settings → Clear Data</strong> — delete individual categories of data</li>
-        <li><strong>Settings → Clear Data → Reset Application</strong> — removes all data, credentials, and your PIN, returning the app to its initial state</li>
+        <li><strong>Settings → Reset Application</strong> — removes all data, credentials, and your PIN, returning the app to its initial state</li>
         <li>Deleting the app from your device removes all locally stored data</li>
     </ul>
 
-    <h2>11. Children's Privacy</h2>
+    <h2>12. Children's Privacy</h2>
     <p>RepeatRx is not directed at children under the age of 13 and does not knowingly collect data from children.</p>
 
-    <h2>12. Changes to This Policy</h2>
+    <h2>13. Changes to This Policy</h2>
     <p>If this policy changes, the updated version will be posted at this URL with a revised date.</p>
 
 
