@@ -19,20 +19,22 @@
         ul { padding-left: 1.4em; }
         .updated { color: #888; font-size: 0.9em; margin-bottom: 2em; }
         a { color: #007aff; }
+        code { font-size: 0.95em; background: #f2f2f2; padding: 1px 5px; border-radius: 4px; }
     </style>
 </head>
 <body>
 
     <h1>RepeatRx Support</h1>
-    <p class="updated">Version 1.2.1</p>
+    <p class="updated">Version 1.3.0</p>
 
-    <p>RepeatRx is a prescription management app for iOS that helps you and your family manage repeat and non-repeat medications, and send requests directly to your GP practice.</p>
+    <p>RepeatRx is a prescription management app for iOS that helps you and your family manage repeat and non-repeat medications, and send requests directly to your GP practice by email.</p>
 
     <h2>Getting Started</h2>
     <ul>
         <li>Tap <strong>Patients</strong> and press <strong>+</strong> to add your first patient</li>
         <li>Fill in personal details, your GP practice name and email address, then add your medications</li>
-        <li>Go to <strong>Request</strong>, select the medications you need, and tap <strong>Send Prescription Request</strong></li>
+        <li>Use <strong>Find Address</strong> in Personal Details to search and auto-fill your address by postcode</li>
+        <li>Go to <strong>Order Prescription</strong>, select the medications you need, and tap <strong>Send Prescription Request</strong></li>
     </ul>
 
     <h2>Sending Emails</h2>
@@ -42,11 +44,31 @@
         <li><strong>SMTP (Direct)</strong> — sends directly from your own email account using SMTP credentials. Configure this in <strong>Settings → Email Settings</strong>.</li>
     </ul>
 
+    <h2>Medications Dashboard</h2>
+    <p>The dashboard gives you a quick overview of all medications for a patient. Pill gauges show current stock levels and change colour based on status — green when stocked up, orange when running low, and red when critically low or at zero. The dashboard opens automatically when you select a patient; toggle this per patient from the patient detail screen.</p>
+    <ul>
+        <li>Tap a pill gauge to edit that medication</li>
+        <li>Toggle the cart icon on low-stock medications and tap <strong>Order Request</strong> to start a prescription for those items</li>
+        <li>Pending requests are listed below the gauges — tap one to open it and mark items as received</li>
+    </ul>
+
+    <h2>Inventory Tracking</h2>
+    <p>Enable <strong>Track Inventory</strong> on any medication to have RepeatRx count down your stock automatically based on your dose schedule. Stock is updated when you mark a prescription as received.</p>
+    <ul>
+        <li><strong>Daily</strong> — set a dose time and whether doses are spread through the day or taken all at once</li>
+        <li><strong>Weekly</strong> — set which day of the week the dose falls on</li>
+        <li><strong>Monthly</strong> — set which day of the month</li>
+        <li>Set a <strong>minimum stock</strong> level to trigger orange and red warnings before you run out</li>
+    </ul>
+
     <h2>Multiple Patients</h2>
     <p>RepeatRx supports multiple patients. Each patient has their own medications, GP practice details, email preferences, and request history. Add additional patients from the <strong>Patients</strong> tab by tapping <strong>+</strong>.</p>
 
-    <h2>PIN Protection</h2>
-    <p>You can protect the app with a PIN or Face ID / Touch ID. Set this up in <strong>Settings → Security</strong>. If you forget your PIN, you can reset the app from <strong>Settings → Reset Application</strong>, though this will remove all data.</p>
+    <h2>Data Export &amp; Import</h2>
+    <p>Back up all your data and restore it on another device. Go to <strong>Settings → Data → Export Data</strong> to create a <code>.repeatrx</code> file containing all patients, medications, and prescription history. Share it via AirDrop, Files, or email, then import it on any device running RepeatRx. Existing patients are matched by ID so there are no duplicates on import.</p>
+
+    <h2>Security</h2>
+    <p>Protect the app with a PIN or Face ID / Touch ID via <strong>Settings → Security</strong>. Authentication can be turned off entirely if you prefer — when disabled, the PIN and biometric options are hidden. If you forget your PIN, reset the app from <strong>Settings → Reset Application</strong>, though this will remove all data.</p>
 
     <h2>Subscription</h2>
     <p>RepeatRx is available with a 7-day free trial, then £0.99/year. Your subscription is managed through your Apple ID. To cancel, go to <strong>iOS Settings → Apple ID → Subscriptions</strong>. To restore a previous purchase on a new device, tap <strong>Restore Purchase</strong> on the subscription screen.</p>
@@ -64,6 +86,12 @@
 
     <p><strong>Does the app confirm my email was received?</strong><br>
     When using the Default Mail App method, delivery is handled by your mail app and RepeatRx cannot confirm receipt. When using SMTP, a successful send is confirmed within the app.</p>
+
+    <p><strong>How do I move my data to a new device?</strong><br>
+    Go to <strong>Settings → Data → Export Data</strong> on your old device and share the <code>.repeatrx</code> file to your new device. Open the file or use <strong>Settings → Data → Import Data</strong> to restore everything.</p>
+
+    <p><strong>My stock levels aren't counting down correctly — what should I check?</strong><br>
+    Make sure Track Inventory is enabled and the dose schedule matches how you actually take the medication. Updating your current stock after receiving a prescription resets the countdown accurately.</p>
 
     <p><strong>Where is my data stored?</strong><br>
     All data is stored locally on your device only. RepeatRx does not use any servers or cloud storage. See our <a href="repeatrx-privacy.html">Privacy Policy</a> for full details.</p>
