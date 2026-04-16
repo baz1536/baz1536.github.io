@@ -24,7 +24,7 @@
 <body>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: April 2026 (v1.3.0)</p>
+    <p class="updated">Last updated: April 2026 (v1.4.0)</p>
 
     <p>RepeatRx ("the app") is developed by Barry Rose. This policy explains what data the app collects, how it is used, and how it is protected.</p>
 
@@ -40,14 +40,18 @@
     </ul>
 
     <h2>2. How Your Data Is Stored</h2>
-    <p>All data is stored <strong>locally on your device only</strong>. RepeatRx does not operate any servers, does not send your data to any third-party service, and does not use cloud storage or analytics.</p>
+    <p>Your data is stored on your device and synced privately to your iCloud account using Apple's CloudKit framework. This sync is private — only you can access your data via your Apple ID. RepeatRx does not operate any servers, does not send your data to any third-party service, and does not use analytics.</p>
     <ul>
-        <li>Personal details and medication data are stored using Apple's SwiftData framework on your device</li>
-        <li>Email credentials and your PIN hash are stored in the iOS Keychain, which is encrypted by the operating system</li>
+        <li>Personal details and medication data are stored using Apple's SwiftData framework and synced via your private iCloud database</li>
+        <li>Email credentials and your PIN hash are stored in the iOS Keychain, which is encrypted by the operating system and is not synced via iCloud</li>
         <li>App preferences are stored in the device's local UserDefaults</li>
     </ul>
 
-    <h2>3. How Your Data Is Used</h2>
+    <h2>3. iCloud Sync</h2>
+    <p>RepeatRx uses Apple's CloudKit to sync your data across all devices signed in to the same Apple ID. Your data is stored in your private iCloud database and is not accessible to RepeatRx or any third party. Apple's iCloud privacy policy applies to data stored in iCloud: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</p>
+    <p>If you remove the app, your data remains in iCloud and will be restored when you reinstall. To delete your iCloud data, go to <strong>iOS Settings → Apple ID → iCloud → Manage Account Storage → RepeatRx → Delete Data</strong>.</p>
+
+    <h2>4. How Your Data Is Used</h2>
     <p>Your data is used solely to:</p>
     <ul>
         <li>Compose and send prescription request emails to each patient's GP practice via your own email account</li>
@@ -56,43 +60,43 @@
     </ul>
     <p>RepeatRx does not use your data for advertising, analytics, profiling, or any purpose beyond the above.</p>
 
-    <h2>4. Email Sending</h2>
+    <h2>5. Email Sending</h2>
     <p>RepeatRx supports two methods for sending prescription requests:</p>
     <ul>
         <li><strong>Default Mail App:</strong> The app opens your device's default mail app (e.g. Mail, Gmail, Outlook) with the email pre-composed. Sending is handled entirely by that app. RepeatRx has no visibility of whether the email was delivered.</li>
         <li><strong>SMTP:</strong> The app connects directly to your configured SMTP email server using credentials you provide. No email content passes through any RepeatRx infrastructure. You are sending email directly from your own account.</li>
     </ul>
 
-    <h2>5. Camera and Photo Library</h2>
+    <h2>6. Camera and Photo Library</h2>
     <p>If you use the prescription scanning feature, the app may request access to your camera or photo library. Photos are processed entirely on-device using Apple's Vision framework to extract text. No image or photo data is stored by the app, transmitted to any server, or retained after the scan is complete.</p>
 
-    <h2>6. Medication Report</h2>
+    <h2>7. Medication Report</h2>
     <p>You can generate a PDF report of your selected medications. This report is created entirely on-device and shared only via the iOS share sheet at your explicit request (e.g. printed, saved to Files, or emailed). The app does not send or store this report anywhere automatically.</p>
 
-    <h2>7. Address Lookup</h2>
+    <h2>8. Address Lookup</h2>
     <p>When using the address search feature in patient personal details, the app sends the postcode or address text you type to the Ordnance Survey Places API at <code>api.os.uk</code>. No personal data is included in these requests — only the search term you enter. Results are used solely to auto-fill the address fields and are not stored by the app.</p>
 
-    <h2>8. Data Export</h2>
+    <h2>9. Data Export</h2>
     <p>You can export your data as a <code>.repeatrx</code> file using <strong>Settings → Data → Export Data</strong>. This file contains all patient details, medications, and prescription history in an unencrypted format. Once exported, the file is handled by iOS and shared at your direction (e.g. via AirDrop, Files, or email). RepeatRx does not transmit this file anywhere automatically. You are responsible for the security of any exported file.</p>
 
-    <h2>9. Biometric Data</h2>
+    <h2>10. Biometric Data</h2>
     <p>If you enable Face ID or Touch ID, authentication is handled entirely by iOS using Apple's LocalAuthentication framework. The app never has access to your biometric data.</p>
 
-    <h2>10. Data Sharing</h2>
-    <p>RepeatRx does not share your data with any third party. Your data never leaves your device except as part of emails you explicitly choose to send, or files you explicitly choose to export.</p>
+    <h2>11. Data Sharing</h2>
+    <p>RepeatRx does not share your data with any third party. Your data never leaves your device or private iCloud account except as part of emails you explicitly choose to send, or files you explicitly choose to export.</p>
 
-    <h2>11. Data Deletion</h2>
-    <p>You can delete your data at any time from within the app:</p>
+    <h2>12. Data Deletion</h2>
+    <p>You can delete your data at any time:</p>
     <ul>
         <li><strong>Patients list → swipe to delete</strong> — removes a patient and all their medications and history</li>
-        <li><strong>Settings → Reset Application</strong> — removes all data, credentials, and your PIN, returning the app to its initial state</li>
-        <li>Deleting the app from your device removes all locally stored data</li>
+        <li><strong>Deleting the app</strong> — removes all locally stored data from your device. Your iCloud data is retained until you delete it via iOS Settings.</li>
+        <li><strong>iOS Settings → Apple ID → iCloud → Manage Account Storage → RepeatRx → Delete Data</strong> — permanently removes all RepeatRx data from iCloud</li>
     </ul>
 
-    <h2>12. Children's Privacy</h2>
+    <h2>13. Children's Privacy</h2>
     <p>RepeatRx is not directed at children under the age of 13 and does not knowingly collect data from children.</p>
 
-    <h2>13. Changes to This Policy</h2>
+    <h2>14. Changes to This Policy</h2>
     <p>If this policy changes, the updated version will be posted at this URL with a revised date.</p>
 
 
