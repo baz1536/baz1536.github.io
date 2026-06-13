@@ -40,10 +40,10 @@
     </ul>
 
     <h2>2. How Your Data Is Stored</h2>
-    <p>All data is stored <strong>locally on your device only</strong> using the iOS Keychain, which is encrypted by the operating system. SmartGoCharge does not operate any servers and does not transmit your data to any infrastructure controlled by the app developer.</p>
+    <p>All data is stored <strong>locally on your device only</strong>. SmartGoCharge does not operate any servers and does not transmit your data to any infrastructure controlled by the app developer.</p>
     <ul>
-        <li>Your EDF account credentials and API token are stored in the iOS Keychain</li>
-        <li>Account, tariff, and device information is cached in the iOS Keychain for convenience</li>
+        <li>Your EDF account credentials and API token are stored in the iOS Keychain, encrypted by the operating system with <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code> protection</li>
+        <li>Account, tariff, and device information is cached in the app's local UserDefaults storage on your device</li>
         <li>No data is written to iCloud, third-party analytics services, or any remote storage</li>
     </ul>
 
