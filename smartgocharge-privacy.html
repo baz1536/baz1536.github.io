@@ -24,7 +24,7 @@
 <body>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: June 2026 (v1.0)</p>
+    <p class="updated">Last updated: June 2026 (v1.0.1)</p>
 
     <p>SmartGoCharge ("the app") is developed by dBR Promotions. This policy explains what data the app collects, how it is used, and how it is protected.</p>
 
@@ -37,6 +37,7 @@
         <li>Your EDF account number and associated meter/tariff details — retrieved from the EDF API and cached locally</li>
         <li>Smart device information (vehicle make/model, charger make/model) — retrieved from the EDF API and cached locally</li>
         <li>A JWT authentication token — issued by EDF Energy upon login and stored temporarily for API access</li>
+        <li>Smart charging session history (completed sessions) — retrieved from the EDF API and stored on your device so your history is preserved beyond the EDF API’s 12-hour retrieval window</li>
     </ul>
 
     <h2>2. How Your Data Is Stored</h2>
@@ -70,10 +71,10 @@
     <h2>6. Data Deletion</h2>
     <p>You can remove all locally stored data at any time:</p>
     <ul>
-        <li><strong>Settings → Log Out</strong> — clears all cached data and credentials from the device</li>
-        <li><strong>Settings → Clear Cached Data</strong> — removes account data while logging you out</li>
+        <li><strong>Account → Delete App Data</strong> — permanently removes all credentials, cached account data, and charging history from your device. Your EDF Energy account is not affected.</li>
         <li>Deleting the app from your device removes all data stored by the app</li>
     </ul>
+    <p>To delete your EDF Energy account itself, please contact EDF Energy directly at <a href="https://www.edfenergy.com/contact">edfenergy.com/contact</a>. SmartGoCharge does not create or manage EDF accounts.</p>
 
     <h2>7. Security</h2>
     <p>Your credentials are stored using the iOS Keychain with <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code> protection, meaning they cannot be accessed when the device is locked and are not included in iCloud backups.</p>
