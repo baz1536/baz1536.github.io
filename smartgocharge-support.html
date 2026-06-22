@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartGoCharge – Support</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+        h1 { font-size: 2em; margin-bottom: 4px; }
+        h2 { font-size: 1.2em; margin-top: 2em; color: #333; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+        h3 { font-size: 1em; margin-top: 1.4em; margin-bottom: 4px; color: #111; }
+        p, li { font-size: 1em; color: #444; }
+        ul { padding-left: 1.4em; }
+        .updated { color: #888; font-size: 0.9em; margin-bottom: 2em; }
+        a { color: #007aff; }
+        .note {
+            background: #f0f7ff;
+            border-left: 4px solid #007aff;
+            padding: 10px 14px;
+            border-radius: 4px;
+            margin: 12px 0;
+            font-size: 0.95em;
+            color: #333;
+        }
+        .warning {
+            background: #fff8f0;
+            border-left: 4px solid #ff9500;
+            padding: 10px 14px;
+            border-radius: 4px;
+            margin: 12px 0;
+            font-size: 0.95em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SmartGoCharge Support</h1>
+    <p class="updated">Last updated: June 2026</p>
+
+    <p>SmartGoCharge is an unofficial companion app for EDF Energy customers enrolled in a smart EV charging tariff. This page covers common questions, troubleshooting steps, and how to get in touch.</p>
+
+    <div class="note"><strong>SmartGoCharge is not affiliated with EDF Energy.</strong> For account billing, tariff changes, or issues with your EDF account, please contact EDF Energy directly at <a href="https://www.edfenergy.com/contact">edfenergy.com/contact</a>.</div>
+
+    <h2>Getting Started</h2>
+
+    <h3>What do I need to use SmartGoCharge?</h3>
+    <p>You need:</p>
+    <ul>
+        <li>An active EDF Energy account</li>
+        <li>An EDF Go Electric tariff with the Smart Charging Bolt-On enabled</li>
+        <li>A compatible smart EV charger or vehicle registered with EDF's smart charging service</li>
+        <li>Your EDF Energy account email address and password</li>
+    </ul>
+
+    <h3>How do I sign in?</h3>
+    <p>On first launch, tap <strong>Get Started</strong> and enter the email address and password you use to log in to your EDF Energy online account. Your credentials are stored securely in your device's Keychain and are never sent to any server other than EDF Energy's own API.</p>
+
+    <h3>The app says I don't have a smart charging device</h3>
+    <p>This means your EDF account does not currently have a compatible smart charger or vehicle registered. Make sure you have the Smart Charging Bolt-On active on your EDF tariff. You can sign up at <a href="https://www.edfenergy.com/electric-cars/ev-tariffs/smart-charging-bolt-on">edfenergy.com/smart-charging-bolt-on</a>.</p>
+
+    <h2>Charging Schedule</h2>
+
+    <h3>Why are there no planned sessions showing?</h3>
+    <p>Planned sessions are scheduled by EDF's smart charging system based on your preferences (ready-by time and charge target), your current electricity tariff, and grid conditions. If no sessions are shown it may mean:</p>
+    <ul>
+        <li>Your vehicle is already at or above your charge target</li>
+        <li>Your charger is not currently connected to your vehicle</li>
+        <li>Smart charging is suspended — check the smart charging toggle on the main screen</li>
+        <li>EDF's system has not yet scheduled sessions for tonight — try refreshing later</li>
+    </ul>
+
+    <h3>What does Boost do?</h3>
+    <p>Boost starts an immediate charge outside the normal smart schedule. This charges at the standard (peak) rate. Use it when you need charge urgently and can't wait for the overnight off-peak window. Tap <strong>Stop Boost</strong> to end it early.</p>
+
+    <h3>What does suspending smart charging do?</h3>
+    <p>Suspending smart charging tells EDF's system to stop managing your charging schedule. Your charger may continue charging at its own default behaviour. Resume smart charging to hand control back to EDF's system.</p>
+
+    <h2>Charging History</h2>
+
+    <h3>Why does my history only go back a few days?</h3>
+    <p>The EDF API provides up to 12 hours of completed session history per refresh. SmartGoCharge stores sessions on your device each time it refreshes, building up a full local history over time. History will accumulate from the point you first installed and used the app — sessions before that cannot be retrieved.</p>
+
+    <h3>Why are some sessions shown in orange and some with a moon?</h3>
+    <p>Sessions with a moon icon occurred during your off-peak window (typically 23:00–06:00). Sessions with an orange bolt occurred outside the off-peak window but were still charged at the smart charging rate — EDF charges all smart sessions at the off-peak rate regardless of the time slot.</p>
+
+    <h3>Are the cost estimates accurate?</h3>
+    <p>Cost estimates are calculated using the off-peak unit rate from your tariff as reported by EDF Energy. They are a guide only. Your actual bill may differ due to standing charges, tariff changes, or other adjustments applied by EDF. Always check your official EDF Energy bill for accurate figures.</p>
+
+    <h2>Notifications</h2>
+
+    <h3>What notifications does the app send?</h3>
+    <ul>
+        <li><strong>Planned sessions</strong> — sent when new charging sessions are added to your schedule (not when existing ones are updated or removed)</li>
+        <li><strong>Completed sessions</strong> — sent when new completed sessions are detected after a background refresh</li>
+    </ul>
+    <p>You can enable or disable each notification type individually in <strong>Account → Notifications</strong>.</p>
+
+    <h3>I'm getting notifications when nothing has changed</h3>
+    <p>If you experience this, please contact us using the email below with a description of when the notification appeared. We use session start and end times to detect genuine changes, so spurious notifications should be rare.</p>
+
+    <h3>Why is there a badge number on the app icon?</h3>
+    <p>The badge shows the number of planned charging sessions currently scheduled. It clears automatically when you open the app.</p>
+
+    <h2>Tariff &amp; Rates</h2>
+
+    <h3>Where does the tariff information come from?</h3>
+    <p>Tariff rates (unit rate and standing charge) are fetched from EDF Energy's public products API. No personal data is sent for this request. Rates are cached and updated each time you refresh.</p>
+
+    <h3>My tariff rate looks wrong</h3>
+    <p>Rates are fetched based on the tariff code associated with your EDF account. If you have recently changed tariff, try refreshing your account data via <strong>Account → Refresh Account Data</strong>. If rates still look incorrect, please check your EDF online account for the current rates and contact us if there is a persistent discrepancy.</p>
+
+    <h2>Account &amp; Data</h2>
+
+    <h3>How do I delete all my data from the app?</h3>
+    <p>Go to <strong>Account → Delete App Data</strong>. This permanently removes all credentials, cached account information, and charging history from your device. Your EDF Energy account is not affected.</p>
+
+    <h3>Does deleting app data close my EDF account?</h3>
+    <p>No. SmartGoCharge only removes data stored locally on your device. Your EDF Energy account, tariff, and smart charging registration remain unchanged. To close your EDF account, contact EDF Energy directly at <a href="https://www.edfenergy.com/contact">edfenergy.com/contact</a>.</p>
+
+    <h3>Is my password stored securely?</h3>
+    <p>Yes. Your email and password are stored in the iOS Keychain with <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code> protection. This means they are encrypted by the operating system, cannot be accessed when your device is locked, and are not included in iCloud backups or device backups.</p>
+
+    <h2>Troubleshooting</h2>
+
+    <h3>The app won't sign in</h3>
+    <ul>
+        <li>Check your email and password are correct by signing in at <a href="https://www.edfenergy.com">edfenergy.com</a></li>
+        <li>If you recently changed your EDF password, delete the app and reinstall to re-enter your credentials</li>
+        <li>Check your internet connection</li>
+    </ul>
+
+    <h3>The app is showing old data</h3>
+    <p>Pull down on the main screen to refresh. The app also refreshes automatically in the background every 15 minutes when not in use. If data is still stale, check your internet connection and try again.</p>
+
+    <h3>Background refresh doesn't seem to be working</h3>
+    <ul>
+        <li>Go to iPhone <strong>Settings → General → Background App Refresh</strong> and ensure it is enabled for SmartGoCharge</li>
+        <li>iOS may limit background refresh if your device is in low-power mode or battery is low</li>
+        <li>The system controls exactly when background refreshes run — the app requests a refresh every 15 minutes but iOS may delay or batch these</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>If you have a question not covered here, or have found a bug, please get in touch:</p>
+    <p><a href="mailto:barry@dbrose.eu">barry@dbrose.eu</a></p>
+
+    <div class="warning">Remember: SmartGoCharge is an unofficial app. For anything related to your EDF Energy account, billing, or tariff, please contact EDF Energy directly at <a href="https://www.edfenergy.com/contact">edfenergy.com/contact</a>.</div>
+
+</body>
+</html>
